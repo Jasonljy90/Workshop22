@@ -52,10 +52,10 @@ public class RsvpRepoImpl {
         RSVP rsvp = new RSVP();
         try {
             rsvp = jdbcTemplate.queryForObject(findByNameSQL, BeanPropertyRowMapper.newInstance(RSVP.class), name);
-            return rsvp;
         } catch (Exception e) {
-            return rsvp;
+
         }
+        return rsvp;
     }
 
     public Boolean save(RSVP rsvp) {
